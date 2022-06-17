@@ -1,0 +1,11 @@
+version: '3.1'
+
+services:
+  google-api:
+    build: ./docker-image
+    image: python
+    container_name: google-api
+    volumes:
+      - ./data/client_secrets.json:/client_secrets.json
+      - ./data/testing-data-consolidation.json:/testing-data-consolidation.json
+      - ./script/pedro-eng-dados-beanalytic.py:/bin/pedro-eng-dados-beanalytic.py

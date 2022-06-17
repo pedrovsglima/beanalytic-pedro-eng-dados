@@ -1,0 +1,15 @@
+[
+	{
+		"name": "Pedro",
+		"phone": "081",
+		"email": "@beanalytic",
+		"address": "Rua",
+		"postalZip": "1234",
+		"region": "PE",
+		"country": "BR",
+		"list": 11,
+		"numberrange": 10,
+		"currency": "$0",
+		"NOVA COLUNA": "TESTE"
+	}
+]
