@@ -51,6 +51,6 @@ A escolha de rodar a aplicação com o Docker foi a forma de garantir que todos 
 
 - funcionamento do algoritmo de consolidação: é executado sempre que uma aba é criada, é verificado o que já tem de informação (chaves e conteúdo) na aba "DATA CONSOLIDATION" e, considerando uma chave identificadora, anexam-se novas linhas caso estas ainda não constem;
 
-- chave identificadora: apesar de não ser a escolha ideial, para efeito de demonstração, foi definido o "email" como chave identificadora. Como os dados que estão sendo trabalhados já não apresenta um ID, uma abordagem para essa situação seria a de gerar uma chave identificadora, por exemplo, usando cada valor presente nos registros;
+- chave identificadora: apesar de não ser a escolha ideal, para efeito de demonstração, foi definido o "email" como chave identificadora. Como os dados que estão sendo trabalhados já não apresenta um ID, uma abordagem para essa situação seria a de gerar uma chave identificadora, por exemplo, usando cada valor presente nos registros;
 
 - alinhamento conteúdo e cabeçalho: um cuidado tomado em todo o desenvolvimento da aplicação foi o de garantir que a inserção dos dados sempre respeite o cabeçalho da planilha e, caso não exista correspondência, a célula é deixada em branco.
