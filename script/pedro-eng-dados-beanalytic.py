@@ -40,15 +40,13 @@ class Spreadsheet():
         worksheets_list = [worksheet.title for worksheet in worksheet_objs]
         return worksheets_list
 
-    # recebe um conjunto de dados e um cabeçalho, esta função retorna uma lista 
-    # que garante que a planilha será preenchida conforme o cabeçalho
+    # recebe um conjunto de dados e um cabeçalho, esta função retorna uma lista que garante que a planilha será preenchida conforme o cabeçalho
     def _arrange_values_to_insert(self, data, column_header):
         # mapeamento cabeçalho e chave
         header_to_key = { i : i for i in column_header }
         list_values_to_insert = []
         
-        # o algoritmo organiza os dados de acordo com o cabeçalho e, caso um registro
-        # não tenha determinada chave, o valor referente ficará em branco
+        # o algoritmo organiza os dados de acordo com o cabeçalho e, caso um registro não tenha determinada chave, o valor referente ficará em branco
         for instance in data:
             arrange_key_to_header = []
             for column in column_header:
@@ -88,7 +86,7 @@ class Spreadsheet():
         # define a planilha de trabalho
         self.data_consolidation_worksheet = self.spreadsheet.worksheet(Spreadsheet.CONSOLIDATION_WORKSHEET)
         
-        #### 1. garantir que todas as chaves possíveis estejam como cabeçalho
+        ### 1. garantir que todas as chaves possíveis estejam como cabeçalho
         # lê o cabeçalho atual
         self.current_header = self.data_consolidation_worksheet.row_values(Spreadsheet.HEADER_INDEX)
         # se necessário, anexa ao cabeçalho atual as chaves presentes na última aba criada
@@ -99,7 +97,7 @@ class Spreadsheet():
         ### 2. ter uma lista com todos os emails da aba DATA CONSOLIDATION
         # definiu-se o 'email' como chave identificadora
         key = "email"
-        # verifica em que célula está localizada
+        # verifica em que célula está localizada a chave identificadora
         email_cell = self.data_consolidation_worksheet.find(key)
         # armazena todas os emails presentes na aba "DATA CONSOLIDATION"
         emails_data_consolidation = self.data_consolidation_worksheet.col_values(email_cell.col)[1:]
